@@ -96,8 +96,6 @@
         acercar al usuario a una comprension mayor del marco dentro del cual se pretende estudiar esta problematica y a un 
         mejor conocimiento de las variables con las que el INEGI se da a la tarea de medir la educacion y economia del hogar en Mexico."),
       br(),
-      h3("Variables:"),
-      strong("DETALLE VARIABLES"),
       h3("Matriz de Dispersion"),
       plotOutput("plotIntro"),
       p("Esta matriz de dispersion, con la que podras jugar en la siguiente pestana, nos permite estudiar las variables que
