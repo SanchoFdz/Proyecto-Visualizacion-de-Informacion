@@ -1,8 +1,8 @@
   library(shiny)
   library(leaflet)
   library(leaflet.extras)
-  #install.packages("ggdendro")
-  library("ggdendro")
+  library(ggdendro)
+  library(reshape)
   library(dplyr)
   library(fullPage)
   library(readxl)
@@ -193,12 +193,11 @@
       correM <- cor(datos)
       correM2 <- melt(correM)
       distancia <- as.dist((1- correM)^2)
-      distancia
       agrupamiento3 <- hclust(distancia)
 
       correM_Ordenada <- correM[agrupamiento3$order, agrupamiento3$order]
       correM3 <- melt(correM_Ordenada)
-      heatmap3 <- ggplot(correM3, aes(Var1,Var2, fill=value))+geom_tile()
+      heatmap3 <- ggplot(correM3, aes(X1,X2, fill=value))+geom_tile()
       heatmap3
       
     })
